@@ -18,7 +18,7 @@ body {
     margin: 80px auto;
     padding: 20px;
     text-align: center;
-    background: linear-gradient(to bottom, #0259a0, #00008B);
+    background: linear-gradient(to bottom, #0b8ffc, #00008B);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
     border-radius: 15px;
 }
@@ -52,10 +52,14 @@ body {
 
 #temperature {
     font-size: 3em;
-    margin-top: 1em;
+    margin-top: 0.5em;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
  
 #type {
-    font-size: 20px;
+    font-size: 25px;
 }
+
+ #weather-result {
+    margin-top: 6em;
+ }
