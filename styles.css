@@ -13,12 +13,12 @@ body {
 #weather-container {
     border : 2px solid black;
     border-radius: 6px;
-    width: 30em;
-    height: 30em;
+    width: 32em;
+    height: 33em;
     margin: 80px auto;
     padding: 20px;
     text-align: center;
-    background: linear-gradient(to bottom, #4682B4, #00008B);
+    background: linear-gradient(to bottom, #0259a0, #00008B);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
     border-radius: 15px;
 }
