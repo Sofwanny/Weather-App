@@ -15,7 +15,7 @@ const displayWeatherData = (data) => {
     const weatherResult = document.getElementById("weather-result");
     weatherResult.innerHTML = `<div id="weather-result"> 
                   <div id="description">
-                  <img src="https://img.icons8.com/color/96/000000/partly-cloudy-day.png" alt="Partly Cloudy" width="150" height="150">
+                  <img src="image/sun.png" alt="Partly Cloudy" width="150" height="150">
                 </div>
                 <div id="type">${weather[0].main}</div>
                 <div id="temperature">${main.temp}°C</div>
