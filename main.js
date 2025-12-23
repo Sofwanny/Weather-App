@@ -7,6 +7,12 @@ const displayWeather = (weatherData) => {
         weatherResult.innerHTML = "<p>No weather data available.</p>";
         return;
     }
+    
+    if (weatherData.cod && Number(weatherData.cod) !== 200) {
+        const weatherResult = document.getElementById("weather-result");
+        weatherResult.innerHTML = `<p>Invalid city name: ${weatherData.message || 'Please try again.'}</p>`;
+        return;
+    }
     displayWeatherData(weatherData);
 }
 
