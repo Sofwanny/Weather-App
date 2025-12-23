@@ -24,15 +24,17 @@ const displayWeatherData = (data) => {
 
     const weatherIcon = document.getElementById("weather-icon");
     const condition = weather?.[0]?.main;
+    const iconCode = weather?.[0]?.icon; 
+    const isNight = typeof iconCode === "string" && iconCode.endsWith("n");
     let iconSrc = "image/mist.png";
     if (condition === "Clouds") {
-        iconSrc = "image/cloud.png";
+        iconSrc = isNight ? "image/cloud-night.png" : "image/cloud.png";
     } else if (condition === "Rain") {
-        iconSrc = "image/rain.png";
+        iconSrc = isNight ? "image/rain-night.png" : "image/rain.png";
     } else if (condition === "Snow") {
         iconSrc = "image/snow.png";
     } else if (condition === "Clear") {
-        iconSrc = "image/sun.png";
+        iconSrc = isNight ? "image/moon.png" : "image/sun.png";
     } else if (condition === "Thunderstorm") {
         iconSrc = "image/thunderstorm.png";
     }
