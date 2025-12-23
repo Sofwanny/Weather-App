@@ -32,7 +32,7 @@ getWeatherBtn.addEventListener("click", () => {
     const city = cityInput.value.trim();
     if (!city) {
         const weatherResult = document.getElementById("weather-result");
-        weatherResult.innerHTML = "<p>Please enter a city name.</p>";
+        weatherResult.innerHTML = "<p>Invalid city name. Please enter a city name.</p>";
         return;
     }
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=4985c9944c281ff2ed201baf328dbaa2`)
