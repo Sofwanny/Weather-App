@@ -15,7 +15,7 @@ const displayWeatherData = (data) => {
     const weatherResult = document.getElementById("weather-result");
     weatherResult.innerHTML = `<div id="weather-result"> 
                   <div id="description">
-                  <img src="image/sun.png" alt="Partly Cloudy" width="150" height="150">
+                  <img src="image/sun.png" alt="Partly Cloudy" width="150" height="150" id="weather-icon">
                 </div>
                 <div id="type">${weather[0].main}</div>
                 <div id="temperature">${main.temp}°C</div>
@@ -69,3 +69,17 @@ cityInput.addEventListener("keypress", (event) => {
             });
     }
 });
+
+if (data.weather[0].main === "Clouds")  {
+    weatherIcon.src = "image/cloud.png";
+} else if (data.weather[0].main === "Rain") {
+    weatherIcon.src = "image/rain.png";
+} else if (data.weather[0].main === "Snow") {
+    weatherIcon.src = "image/snow.png";
+} else if (data.weather[0].main === "Clear") {
+    weatherIcon.src = "image/sun.png";
+} else if (data.weather[0].main === "Thunderstorm") {
+    weatherIcon.src = "image/thunderstorm.png";
+} else {
+    weatherIcon.src = "image/mist.png";
+}   
